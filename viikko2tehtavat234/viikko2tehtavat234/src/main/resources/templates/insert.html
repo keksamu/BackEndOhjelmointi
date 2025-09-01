@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add New Friend</title>
+    <meta charset="UTF-8" />
+</head>
+<body>
+    <h1>Add friend to list</h1>
+    <h2>Name</h2>
+
+    <form th:action="@{/newfriends}" th:object="${friend}" method="post">
+        <p>
+            First Name: <input type="text" th:field="*{firstName}" />
+        
+            Last Name: <input type="text" th:field="*{lastName}" />
+        </p>
+        <p>
+            <input type="submit" value="Add Friend" />
+        </p>
+    </form>
+</body>
+</html>
